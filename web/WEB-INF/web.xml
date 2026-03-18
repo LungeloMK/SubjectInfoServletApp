@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>SubjectDetailsServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.SubjectDetailsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SoshLecturersServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.SoshLecturersServlet</servlet-class>
+        <init-param>
+            <param-name>lec1_name</param-name>
+            <param-value>Vuyisile Memani</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lec1_email</param-name>
+            <param-value>Memaniv@tut.ac.za</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lec2_name</param-name>
+            <param-value>Johnson Dehinbo</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lec2_email</param-name>
+            <param-value>DehinboOJ@tut.ac.za</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lec3_name</param-name>
+            <param-value>To be announced soon</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lec3_email</param-name>
+            <param-value>N/A</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>PolokwaneLecturersServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.PolokwaneLecturersServlet</servlet-class>
+        <init-param>
+            <param-name>lect1_name</param-name>
+            <param-value>Mankoni Khotsa</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lect1_email</param-name>
+            <param-value>KhotsaMW@tut.ac.za</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lect2_name</param-name>
+            <param-value>Viwe Ndzena</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lect2_email</param-name>
+            <param-value>NdzenaVN@tut.ac.za</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lect3_name</param-name>
+            <param-value>Neo Sibanyoni</param-value>
+        </init-param>
+        <init-param>
+            <param-name>lect3_email</param-name>
+            <param-value>SibanyoniNJ@tut.ac.za</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>eMalahleniLecturersServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.eMalahleniLecturersServlet</servlet-class>
+    
+        <init-param>
+            <param-name>l1_name</param-name>
+            <param-value>Thabo Mokoena</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>l1_email</param-name>
+            <param-value>MokoenaT@tut.ac.za</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>l2_name</param-name>
+            <param-value>Lerato Nkosi</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>l2_email</param-name>
+            <param-value>NkosiL@tut.ac.za</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>l3_name</param-name>
+            <param-value>Sibusiso Dlamini</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>l3_email</param-name>
+            <param-value>DlaminiS@tut.ac.za</param-value>
+        </init-param>
+                                                                
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubjectDetailsServlet</servlet-name>
+        <url-pattern>/SubjectDetailsServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SoshLecturersServlet</servlet-name>
+        <url-pattern>/SoshLecturersServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PolokwaneLecturersServlet</servlet-name>
+        <url-pattern>/PolokwaneLecturersServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>eMalahleniLecturersServlet</servlet-name>
+        <url-pattern>/eMalahleniLecturersServlet.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!-- context parameters -->
+    <context-param>
+        <param-name>subject_name</param-name>
+        <param-value>Internet Programming</param-value>
+    </context-param>
+    <context-param>
+        <param-name>subject_code</param-name>
+        <param-value>INT316D</param-value>
+    </context-param>
+    <context-param>
+        <param-name>subject_head_name</param-name>
+        <param-value>Vuyisile Memani</param-value>
+    </context-param>
+    <context-param>
+        <param-name>subject_head_email</param-name>
+        <param-value>Memaniv@tut.ac.za</param-value>
+    </context-param>
+    <context-param>
+        <param-name>num_class_tests</param-name>
+        <param-value>6</param-value>
+    </context-param>
+    <context-param>
+        <param-name>num_semester_tests</param-name>
+        <param-value>2</param-value>
+    </context-param>
+    <context-param>
+        <param-name>num_quizzes</param-name>
+        <param-value>12</param-value>
+    </context-param>
+    <context-param>
+        <param-name>num_projects</param-name>
+        <param-value>1</param-value>
+    </context-param>
+</web-app>
